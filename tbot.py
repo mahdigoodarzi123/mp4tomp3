@@ -32,11 +32,11 @@ def download_video(update: Update, context):
     update.message.reply_text('Video downloaded successfully!')
 
     # calling the converter function to convert the video
-    converter("video.mp4", 'sound.mp3')
+    converter("video.mp4")
     update.message.reply_text('the voice has been splitted from the video')
 
     # removing the video
-    # os.remove('video.mp4')
+    os.remove('video.mp4')
 
     # sending the voice
     chat_id = update.message.chat_id
