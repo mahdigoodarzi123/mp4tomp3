@@ -1,9 +1,4 @@
-from moviepy.video.io.VideoFileClip import VideoFileClip
+import os
 
-
-
-def converter(filename):
-        with VideoFileClip(filename) as video:
-                audio = video.audio
-                audio.write_audiofile("sound.mp3")
-
+def converter(old_name, new_name):
+    os.rename(old_name, new_name)
